@@ -1,0 +1,111 @@
+$cssCore: false;
+$devMode: false;
+$color1: #81CDC6;
+$color2: #4FA6A0;
+$colorText: #555;
+@import "ed-grid/ed-grid";
+
+body {
+  font-size : .9em;
+  line-height : 1.5;
+  color: $colorText;
+}
+
+// Menu
+.main-menu {
+  @include edMenu(l);
+
+  a {
+    color: #fff;
+    text-transform : uppercase;
+    margin-right : 2px;
+    
+    &.active,
+    &:hover {
+      background : rgba(#000,.2);
+    }
+  }
+}
+
+.main-nav {
+  @include edNav('right', l);
+  
+  @include to(l) {
+    background : rgba($color2,.9);
+  }
+}
+
+.nav-toggle {
+  @include navToggle(20px,$color2);
+  @include hideFrom(l);
+}
+
+.nav-container {
+  @include from(l) {
+    background : $color2;
+  }
+}
+
+
+// Banner
+
+.main-banner {
+  &__copy {
+    position : absolute;
+    top : 50%;
+    transform: translateY(-50%);
+    width : 40%;
+  }
+
+  &__title {
+    font-size : 1.3em;
+    @include from(m) {
+      font-size : 2em;
+    }
+
+    span {
+      display : block;
+      &:first-child {
+        font-weight :normal;
+      }
+    }
+  }
+
+  &__content {
+    @include to(m) {
+      display : none;
+    }
+  }
+}
+
+.banner-container {
+  position : relative;
+}
+
+.main-banner {
+  background : #EEE2E4;
+
+  &__img {
+    display : block;
+  }
+}
+
+
+// About us
+.about-us {
+  padding-top : 1.5em;
+
+  &__title {
+    margin : 0;
+  }
+
+  &__subtitle {
+    color: $color1;
+    margin : 0;
+  }
+
+  &__cta {
+    @include button(white,$color2);
+    border : 1px solid $color2;
+  }
+}
