@@ -52,7 +52,7 @@ a {
 | $gutter: separación entre cada item de la cuadricula (opcional)
 |
 */
-.button, .about-us__cta {
+.button, .about-us__cta, .pricing-table__cta {
   display: inline-block;
   line-height: 2.5em;
   padding: 0 1.5em;
@@ -842,7 +842,13 @@ body {
 
 @media screen and (min-width: 1024px) {
   .nav-container {
-    background: #4FA6A0; } }
+    background: #4FA6A0; }
+    .nav-container.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(79, 166, 160, 0.8); } }
 
 .main-banner__copy {
   position: absolute;
@@ -889,6 +895,132 @@ body {
       background: #f2f2f2;
       text-decoration: none; }
     .about-us__cta:active {
+      -webkit-transform: scale(0.97);
+      -ms-transform: scale(0.97);
+      transform: scale(0.97); }
+
+.features-container {
+  position: relative;
+  background: url(../img/mascota.jpg) center/cover;
+  margin-bottom: 2em; }
+  .features-container:before {
+    content: "";
+    position: absolute;
+    background: rgba(79, 166, 160, 0.85);
+    width: 100%;
+    height: 100%;
+    z-index: 5; }
+
+.feature {
+  padding: 2em 0;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+  text-align: center; }
+  .feature__icon {
+    font-size: 3em; }
+  .feature__numbers {
+    font-size: 1.8em; }
+
+.services-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -1em;
+  margin-right: -1em;
+  margin-bottom: 2em; }
+  .services-container img {
+    display: block; }
+  body {
+    overflow-x: hidden; }
+  .services-container > .service {
+    width: calc(100% - 2em);
+    margin: 1em; }
+  @media screen and (min-width: 640px) {
+    .services-container > .service {
+      width: calc(50% - 2em); } }
+  @media screen and (min-width: 1024px) {
+    .services-container > .service {
+      width: calc(33.33333% - 2em); } }
+
+.services-title,
+.services-subtitle {
+  text-align: center; }
+
+.service {
+  position: relative; }
+  .service-icon {
+    position: absolute;
+    font-size: 2.3em;
+    color: #81CDC6; }
+  .service-title, .service-content {
+    padding-left: 3em; }
+  .service-title {
+    margin-top: 0;
+    color: #4FA6A0; }
+
+.gallery {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: 0px;
+  margin-right: 0px; }
+  .gallery img {
+    display: block; }
+  body {
+    overflow-x: hidden; }
+  .gallery > .gallery-item {
+    width: calc(50% - 0px);
+    margin: 0px; }
+  @media screen and (min-width: 640px) {
+    .gallery > .gallery-item {
+      width: calc(25% - 0px); } }
+
+.pricing-title {
+  text-align: center; }
+
+.pricing-table {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  border: 1px solid #81CDC6;
+  margin-bottom: 2em; }
+  .pricing-table__title {
+    background: #4FA6A0;
+    padding: 1em;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5); }
+    .pricing-table__title span {
+      color: #fff;
+      display: inline-block;
+      padding-left: .2em; }
+  .pricing-table__price {
+    font-size: 4em;
+    text-align: center; }
+    .pricing-table__price:before {
+      content: "$";
+      font-size: .5em; }
+  .pricing-table__feature {
+    text-align: center;
+    padding: .5em 1em;
+    border-bottom: 1px solid #ddd;
+    width: 90%;
+    margin: 0 auto; }
+  .pricing-table__cta {
+    background: #4FA6A0;
+    color: #fff;
+    margin: 1em auto;
+    display: table; }
+    .pricing-table__cta:hover {
+      background: #47958f;
+      text-decoration: none; }
+    .pricing-table__cta:active {
       -webkit-transform: scale(0.97);
       -ms-transform: scale(0.97);
       transform: scale(0.97); }

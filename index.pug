@@ -21,4 +21,67 @@ block aboutUs
         p.about-us__content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas feugiat dolor. Quisque eget eros quis neque egestas ultricies. Aliquam porttitor metus ut egestas consequat.
         a(href="#").about-us__cta Contact us
 
+block features
+  .features-container
+    .ed-container
+      .ed-item.s-50.l-25
+        .feature
+          .icon-heart.feature__icon
+          .feature__numbers 12964
+          .features__subtitle Happy clients
+      .ed-item.s-50.l-25
+        .feature
+          .icon-heart.feature__icon
+          .feature__numbers 12964
+          .features__subtitle Happy clients
+      .ed-item.s-50.l-25
+        .feature
+          .icon-heart.feature__icon
+          .feature__numbers 12964
+          .features__subtitle Happy clients
+      .ed-item.s-50.l-25
+        .feature
+          .icon-heart.feature__icon
+          .feature__numbers 12964
+          .features__subtitle Happy clients
 
+block services
+  .ed-container
+    .ed-item
+      h2.services-title Our
+        span Services & Procedures
+      p.services-subtitle Many clients satisfied
+
+      .services-container
+        -var i = 6
+        -while(i--)
+          .service
+            .service-icon.icon-dog
+            h3.service-title Wellness Care
+            p.service-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas feugiat dolor.
+
+block gallery
+  .gallery
+    -var n = 8
+    -while(n--)
+      .gallery-item
+        img(src="https://images.pexels.com/photos/134392/pexels-photo-134392.jpeg")
+
+block pricing
+  .pricing
+    h2.pricing-title Pricing tables
+
+  .ed-container.pricing-tables
+    -var n = 3
+    -while(n--)
+      .ed-item.l-1-3
+        ul.pricing-table
+          li.pricing-table__title Preventive
+            span Inspection
+          li.pricing-table__price 99.99
+          li.pricing-table__feature Feature 1
+          li.pricing-table__feature Feature 2
+          li.pricing-table__feature Feature 3
+          li.pricing-table__feature Feature 4
+          li.pricing-table__feature Feature 5
+          li: a(href="").pricing-table__cta Solicitar

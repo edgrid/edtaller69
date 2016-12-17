@@ -4,13 +4,14 @@ html
     title EDgrid 2 - Landing Pages
     meta(name='viewport', content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="css/styles.css")
+    link(href="https://file.myfontastic.com/pZ7hcrXQqrSNVX6vfYd3jc/icons.css" rel="stylesheet")
   body
     header.ed-container
       .ed-item.s-80
         include block-logo
       .ed-item.s-20.cross-center.main-end
         .nav-toggle#main-nav-toggle
-    .nav-container
+    .nav-container#nav-container
       .ed-container
         .ed-item
           nav.main-nav#main-nav
@@ -20,7 +21,7 @@ html
     block features
     block services
     block gallery
-    //.pricing
+    block pricing
     //.testimonials
     //.posts
     //footer
